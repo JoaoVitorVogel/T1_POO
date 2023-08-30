@@ -1,10 +1,10 @@
 package org.example;
 
 public class Locomotiva {
-    int id;
-    double pesoMax;
-    int maxVagoes;
-    int idComposicao;
+    private int id;
+    private double pesoMax;
+    private int maxVagoes;
+    private int idComposicao;
     
     public Locomotiva(int id, double pesoMax, int maxVagoes, int idComposicao) {
         this.id = id;
@@ -12,7 +12,7 @@ public class Locomotiva {
         this.maxVagoes = maxVagoes;
         this.idComposicao = idComposicao;
     }
-    
+
     public int getId() {
         return id;
     }
@@ -36,5 +36,11 @@ public class Locomotiva {
     }
     public void setIdComposicao(int idComposicao) {
         this.idComposicao = idComposicao;
+    }
+
+    @Override
+    public String toString() {
+        return "Locomotiva [id=" + id + ", pesoMax=" + pesoMax + ", maxVagoes=" + maxVagoes + ", idComposicao="
+                + idComposicao + "]";
     }
 }
