@@ -1,38 +1,41 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class Composicao {
     private int idComposicao;
-    private int listaLocomotivas;
-    private int listaVagoes;
+    private Locomotiva[] listaLocomotivas;
+    private Vagao[] listaVagoes;
 
-    public Composicao(int idComposicao, int listaLocomotivas, int listaVagoes) {
+    public Composicao(int idComposicao, Locomotiva[] listaLocomotivas, Vagao[] listaVagoes) {
         this.idComposicao = idComposicao;
         this.listaLocomotivas = listaLocomotivas;
         this.listaVagoes = listaVagoes;
     }
-    
+
     public int getIdComposicao() {
         return idComposicao;
     }
     public void setIdComposicao(int idComposicao) {
         this.idComposicao = idComposicao;
     }
-    public int getListaLocomotivas() {
+    public Locomotiva[] getListaLocomotivas() {
         return listaLocomotivas;
     }
-    public void setListaLocomotivas(int listaLocomotivas) {
+    public void setListaLocomotivas(Locomotiva[] listaLocomotivas) {
         this.listaLocomotivas = listaLocomotivas;
     }
-    public int getListaVagoes() {
+    public Vagao[] getListaVagoes() {
         return listaVagoes;
     }
-    public void setListaVagoes(int listaVagoes) {
+    public void setListaVagoes(Vagao[] listaVagoes) {
         this.listaVagoes = listaVagoes;
     }
 
     @Override
     public String toString() {
-        return "Composicao [idComposicao=" + idComposicao + ", listaLocomotivas=" + listaLocomotivas + ", listaVagoes="
-                + listaVagoes + "]";
+        return "Composicao [idComposicao=" + idComposicao + ", listaLocomotivas=" + Arrays.toString(listaLocomotivas)
+                + ", listaVagoes=" + Arrays.toString(listaVagoes) + "]";
     }
+
 }
