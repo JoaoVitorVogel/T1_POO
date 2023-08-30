@@ -1,0 +1,61 @@
+TRABALHO TREM
+
+criar uma array de locomotivas disponiveis e um array de vagões disponiveis
+criar um objeto do trem pronto(tendo o identificador de trem), pegar primeiro uma locomotiva, 
+só pode remover a primeira locomotiva do trem criado desfazendo o trem.
+
+
+
+**OPÇÕES**
+--Editar um trem
+
+• Inserir uma locomotiva (informar identificador) respeitando restrições;
+• Inserir um vagão (informar identificador) respeitando restrições;
+• Remover o último elemento do trem;
+• Listar locomotivas livres;
+• Listar vagões livres;
+• Encerrar a edição do trem.
+
+--Listar os trens criados 
+
+--Desfazer um trem
+Deve-se indicar o identificador do trem. A partir de então todos seus vagões e
+locomotivas devem ser liberados e o trem excluído da lista de trens.
+
+--Encerrar o programa
+
+**COMPOSIÇÕES**
+
+
+Locomotiva:
+• Identificador da locomotiva (int)
+• Peso máximo (em toneladas) que consegue puxar (double)
+• Número máximo de vagões que consegue tracionar (int)
+• Referência da composição que está integrando no momento ou null se está livre
+
+Vagão:
+• Identificador do vagão (int)
+• Capacidade máxima de carga em toneladas (double)
+• Referência da composição que está integrando no momento ou null se está livre
+
+Composição:
+• Identificador da composição
+• Lista de locomotivas
+• Lista de vagões
+
+**INFORMAÇÕES IMPORTANTES**
+
+• As locomotivas devem ser as primeiras a serem selecionadas. Não é possível “engatar”
+uma locomotiva após um vagão.
+
+• O total de vagões que podem ser engatados devem respeitar as limitações do conjunto
+de locomotivas (peso máximo que conseguem puxar e número máximo de vagões que
+conseguem tracionar). Para o cálculo do peso máximo considerar o peso do vagão com
+carga máxima.
+
+** Observação: a partir da segunda locomotiva engatada a capacidade total do
+conjunto de locomotivas deve ser reduzida em 10% a cada nova locomotiva
+engatada. Exemplo: suponha que todas as locomotivas tenham capacidade
+para tracionar 30 vagões. Uma composição com uma locomotiva consegue 
+tracionar 30 vagões, com duas locomotivas 50 vagões e com 3 locomotivas 80
+vagões.
