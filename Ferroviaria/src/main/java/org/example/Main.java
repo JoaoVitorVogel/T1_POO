@@ -3,23 +3,15 @@ import java.util.*;
 
 public class Main {
     static Scanner keyboard = new Scanner(System.in);
+    static Vagao[] garagemVagao = new Vagao[100];
     public static void main(String[] args) {
-        Vagao[] garagemVagao = new Vagao[100];
-
-        garagemVagao[0] = new Vagao(12, 100, 0);
-        System.out.println(garagemVagao[0].toString());
+        
 
         for(int i = 0; i < 100; i++){
             garagemVagao[i] = new Vagao(i, 100, 0);
-            System.out.println(i);
         }
 
-        for(int i = 0; i < 100; i++){
-            System.out.println(garagemVagao[i].toString());
-            System.out.println(i);
-        }
-        while(menu());
-     
+        while(menu());    
     }
 
     public static boolean menu(){
@@ -82,7 +74,9 @@ public class Main {
                         String opcaoGaragem = keyboard.next();
                             switch(opcaoGaragem){
                                 case "1":
-                                    //Mostrar Os wagners
+                                    for(int i = 0; i < 100; i++){
+                                        System.out.println(garagemVagao[i].toString());
+                                    }
                                     break;
                                 case "2":
                                     //mostrar as loco
