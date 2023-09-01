@@ -5,6 +5,9 @@ public class Main {
     static Scanner keyboard = new Scanner(System.in);
     static Vagao[] garagemVagao = new Vagao[100];
     static Locomotiva[] garageLocomotiva = new Locomotiva[10];
+    static Vagao[] garagemManobraVagao = new Vagao[100];
+    static Locomotiva[] garagemManobrLocomotiva = new Locomotiva[10];
+    static Composicao[] patioTrem = new Composicao[10];
 
     public static void criaEmpresa(){
         for(int i = 0; i < 100; i++){
