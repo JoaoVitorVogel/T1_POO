@@ -4,11 +4,18 @@ import java.util.*;
 public class Main {
     static Scanner keyboard = new Scanner(System.in);
     static Vagao[] garagemVagao = new Vagao[100];
+    static Locomotiva[] garageLocomotiva = new Locomotiva[10];
     public static void main(String[] args) {
-        
-
         for(int i = 0; i < 100; i++){
             garagemVagao[i] = new Vagao(i, 100, 0);
+        }
+        for(int i = 0; i < 10; i++){
+            garageLocomotiva[i] = new Locomotiva(i, 1500, 15, 0);
+        }
+
+        //coloca no menu
+        for(int i = 0; i < 10; i++){
+            System.out.println(garageLocomotiva.toString());
         }
 
         while(menu());    
