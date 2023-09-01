@@ -26,19 +26,23 @@ public class Main {
     public static boolean menu(){
             System.out.println("    Menu de opções");
             System.out.println("Digite a opção desejada");
-            System.out.println("1.  Editar um trem ");
-            System.out.println("2.  Abrir a garagem ");
-            System.out.println("3.  Listar trens criados ");
-            System.out.println("4.  Desfazer um trem");
-            System.out.println("5.  Encerrar o programa");
+            System.out.println("1.  Criar um trem ");
+            System.out.println("2.  Editar um trem ");
+            System.out.println("3.  Abrir a garagem ");
+            System.out.println("4.  Listar trens criados ");
+            System.out.println("5.  Desfazer um trem");
+            System.out.println("6.  Encerrar o programa");
 
             String opcao = keyboard.next();
             boolean switchEdicao = true;
             boolean switchGaragem = true;
             switch(opcao){
                 case "1":
+                    //Create a train
+                    break;
+                case "2":
                     do{
-                        System.out.println("Digite o a opção do que você deseja alterar no trem: ");
+                        System.out.println("Digite o a opção do que você deseja alterar no trem: ");                     
                         System.out.println("1.  Adicionar uma locomotiva ao trem ");
                         System.out.println("2.  Adicionar um vagão ao trem ");
                         System.out.println("3.  Remover o último vagão do trem ");
@@ -74,7 +78,7 @@ public class Main {
                             }
                         } while(switchEdicao == true);
                     break;
-                case "2":
+                case "3":
                     do{
                         System.out.println("Escolha o que você deseja ver");
                         System.out.println("1.  Mostrar todos os vagões livres ");
@@ -104,13 +108,13 @@ public class Main {
                             }
                     }while(switchGaragem == true);
                     break;
-                case "3":
+                case "4":
                 //listar trens
                     break;
-                case "4":
+                case "5":
                 //Explode the train
                     break;
-                case "5":
+                case "6":
                     System.out.println("---------------------------------------------");
                     System.out.println("            Fim do programa");
                     System.out.println("---------------------------------------------");
