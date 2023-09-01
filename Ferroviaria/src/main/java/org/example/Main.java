@@ -1,7 +1,9 @@
 package org.example;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in); 
        
     }
 
@@ -12,8 +14,6 @@ public class Main {
         System.out.println("2.  Listar trens criados ");
         System.out.println("3.  Desfazer um trem");
         System.out.println("4.  Encerrar o programa");
-       
-        
     }
 
     
