@@ -13,10 +13,10 @@ public class Main {
         for(int i = 0; i < 10; i++){
             garageLocomotiva[i] = new Locomotiva(i, 1500, 15, 0);
         }
+    }
 
-        //coloca no menu
-        for(int i = 0; i < 10; i++){
-
+    public static void main(){
+        criaEmpresa();
         while(menu());    
     }
 
