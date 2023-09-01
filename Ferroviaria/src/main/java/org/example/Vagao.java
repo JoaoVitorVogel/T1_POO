@@ -30,9 +30,7 @@ public class Vagao {
         this.idComposicao = idComposicao;
     }
 
-    @Override
     public String toString() {
-        return "Vagao [idVagao=" + idVagao + ", capacidadeMax=" + capacidadeMax + ", idComposicao=" + idComposicao
-                + "]";
-    }   
+        return "Vagao [idVagao=" + idVagao + ", capacidadeMax=" + capacidadeMax + ", idComposicao=" + idComposicao + "]";
+    } 
 }
