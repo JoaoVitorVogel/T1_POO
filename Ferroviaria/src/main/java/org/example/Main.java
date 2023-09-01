@@ -14,9 +14,7 @@ public class Main {
         }
 
         //coloca no menu
-        for(int i = 0; i < 10; i++){
-            System.out.println(garageLocomotiva.toString());
-        }
+        
 
         while(menu());    
     }
@@ -86,7 +84,9 @@ public class Main {
                                     }
                                     break;
                                 case "2":
-                                    //mostrar as loco
+                                    for(int i = 0; i < 10; i++){
+                                        System.out.println(garageLocomotiva[i].toString());
+                                    }
                                     break;
                                 case "3":
                                     //sair da garagem
