@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Main {
     static Scanner keyboard = new Scanner(System.in);
     static Vagao[] garagemVagao = new Vagao[100];
-    static Locomotiva[] garageLocomotiva = new Locomotiva[10];
     static Vagao[] garagemManobraVagao = new Vagao[100];
+    static Locomotiva[] garageLocomotiva = new Locomotiva[10];
     static Locomotiva[] garagemManobrLocomotiva = new Locomotiva[10];
     static Composicao[] patioTrem = new Composicao[10];
 
@@ -38,10 +38,12 @@ public class Main {
         System.out.println("            5.  Desfazer um trem");
         System.out.println("            6.  Encerrar o programa");
         System.out.println("------------------------------------------------------");
-
         String opcao = keyboard.next();
+
+        // Travas menu
         boolean switchEdicao = true;
         boolean switchGaragem = true;
+
         switch (opcao) {
             case "1":
                 // Create a train
