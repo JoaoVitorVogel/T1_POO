@@ -118,10 +118,7 @@ public class Main {
                 } while (switchGaragem == true);
                 break;
             case "4":
-                for (int i = 0; i < patioTrem.length; i++) {
-                    System.out.println(patioTrem[i].toString());
-                }
-                // listar trens
+                mostraTrens();
                 break;
             case "5":
                 // Explode the train
