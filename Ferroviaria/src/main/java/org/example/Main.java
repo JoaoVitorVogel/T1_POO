@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -117,6 +118,9 @@ public class Main {
                 } while (switchGaragem == true);
                 break;
             case "4":
+                for (int i = 0; i < patioTrem.length; i++) {
+                    System.out.println(patioTrem[i].toString());
+                }
                 // listar trens
                 break;
             case "5":
@@ -147,6 +151,17 @@ public class Main {
         System.out.println("Aqui está a lista com todas as locomotivas livres no momento");
         for (int i = 0; i < 10; i++) {
             System.out.println(garageLocomotiva[i].toStringSemComposicao());
+        }
+    }
+
+    public static void mostraTrens() {
+        System.out.println("Aqui está a lista com todos os trens criados no momento");
+        for (int i = 0; i < patioTrem.length; i++) {
+            if (patioTrem[i] == null) {
+
+            } else {
+                System.out.println(patioTrem[i].toString());
+            }
         }
     }
 }

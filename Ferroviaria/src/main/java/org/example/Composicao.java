@@ -16,26 +16,32 @@ public class Composicao {
     public int getIdComposicao() {
         return idComposicao;
     }
+
     public void setIdComposicao(int idComposicao) {
         this.idComposicao = idComposicao;
     }
+
     public Locomotiva[] getListaLocomotivas() {
         return listaLocomotivas;
     }
+
     public void setListaLocomotivas(Locomotiva[] listaLocomotivas) {
         this.listaLocomotivas = listaLocomotivas;
     }
+
     public Vagao[] getListaVagoes() {
         return listaVagoes;
     }
+
     public void setListaVagoes(Vagao[] listaVagoes) {
         this.listaVagoes = listaVagoes;
     }
 
     @Override
     public String toString() {
-        return "Composicao [idComposicao=" + idComposicao + ", listaLocomotivas=" + Arrays.toString(listaLocomotivas)
-                + ", listaVagoes=" + Arrays.toString(listaVagoes) + "]";
+        return "Composicao [idComposicao = " + idComposicao + ", listaLocomotivas = "
+                + Arrays.toString(listaLocomotivas)
+                + ", listaVagoes = " + Arrays.toString(listaVagoes) + "]";
     }
 
 }
