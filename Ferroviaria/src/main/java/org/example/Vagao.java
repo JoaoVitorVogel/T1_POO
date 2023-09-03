@@ -10,27 +10,38 @@ public class Vagao {
         this.capacidadeMax = capacidadeMax;
         this.idComposicao = idComposicao;
     }
-    
+
     public int getIdVagao() {
         return idVagao;
     }
+
     public void setIdVagao(int idVagao) {
         this.idVagao = idVagao;
     }
+
     public double getCapacidadeMax() {
         return capacidadeMax;
     }
+
     public void setCapacidadeMax(double capacidadeMax) {
         this.capacidadeMax = capacidadeMax;
     }
+
     public int getIdComposicao() {
         return idComposicao;
     }
+
     public void setIdComposicao(int idComposicao) {
         this.idComposicao = idComposicao;
     }
 
     public String toString() {
-        return "Vagao [idVagao=" + idVagao + ", capacidadeMax=" + capacidadeMax + ", idComposicao=" + idComposicao + "]";
-    } 
+        return "Vagao [id Vagão = " + idVagao + ", capacidade máxima suportada = " + capacidadeMax
+                + ", id Trem onde está sendo usada = " + idComposicao
+                + "]";
+    }
+
+    public String toStringSemComposicao() {
+        return "Vagao [id Vagão = " + idVagao + ", capacidade máxima suportada = " + capacidadeMax + "]";
+    }
 }
