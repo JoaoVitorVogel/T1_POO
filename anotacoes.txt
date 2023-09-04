@@ -64,6 +64,5 @@ O QUE FALTA FAZER
 Método - Criar um trem
 Adicionar uma locomotiva ao trem 
 Adicionar um vagão ao trem 
-Remover o último vagão do trem
-Adicionar uma locomotiva ao trem 
+Remover o último vagão do trem 
 Desfazer um trem
