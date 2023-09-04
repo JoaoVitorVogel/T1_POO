@@ -65,11 +65,7 @@ public class Main {
                             // Add locomotiva
                             boolean travaAddLocomotiva = true;
                             do{
-                                System.out.println("------------------------------------------------------");
-                                System.out.println("            Escolha o que deseja fazer");
-                                System.out.println("        1. Voltar ao menu de edição do trem");
-                                System.out.println("        2. Voltar ao menu principal");
-                                System.out.println("------------------------------------------------------");
+                                escolheMenu("de edição do trem");
                                 String menuAddLocomotiva = keyboard.next();
                                 switch (menuAddLocomotiva) {
                                     case "1":
@@ -80,9 +76,7 @@ public class Main {
                                         switchEdicao = false;
                                         break;
                                     default:
-                                        System.out.println("------------------------------------------------------");
-                                        System.out.println("                Opção inválida");
-                                        System.out.println("------------------------------------------------------");
+                                        opcaoInvalida();
                                         break;
                                 }   
                             }   while(travaAddLocomotiva == true);
@@ -91,11 +85,7 @@ public class Main {
                             //Add vagão
                             boolean travaAddVagao = true;
                             do{
-                                System.out.println("------------------------------------------------------");
-                                System.out.println("            Escolha o que deseja fazer");
-                                System.out.println("        1. Voltar ao menu de edição do trem");
-                                System.out.println("        2. Voltar ao menu principal");
-                                System.out.println("------------------------------------------------------");
+                                escolheMenu("de edição do trem");
                                 String menuAddVagoes = keyboard.next();
                                 switch (menuAddVagoes) {
                                     case "1":
@@ -106,9 +96,7 @@ public class Main {
                                         switchEdicao = false;
                                         break;
                                     default:
-                                        System.out.println("------------------------------------------------------");
-                                        System.out.println("                Opção inválida");
-                                        System.out.println("------------------------------------------------------");
+                                        opcaoInvalida();
                                         break;
                                 }   
                             }   while(travaAddVagao == true);
@@ -117,11 +105,7 @@ public class Main {
                             // Remove the last big wagner
                             boolean travaRemoveVagoes = true;
                             do{
-                                System.out.println("------------------------------------------------------");
-                                System.out.println("            Escolha o que deseja fazer");
-                                System.out.println("        1. Voltar ao menu de edição do trem");
-                                System.out.println("        2. Voltar ao menu principal");
-                                System.out.println("------------------------------------------------------");
+                                escolheMenu("de edição do trem");
                                 String menuRemoveVagoes = keyboard.next();
                                 switch (menuRemoveVagoes) {
                                     case "1":
@@ -132,23 +116,16 @@ public class Main {
                                         switchEdicao = false;
                                         break;
                                     default:
-                                        System.out.println("------------------------------------------------------");
-                                        System.out.println("                Opção inválida");
-                                        System.out.println("------------------------------------------------------");
+                                        opcaoInvalida();
                                         break;
                                 }   
                             }   while(travaRemoveVagoes == true);
                             break;
                         case "4":
                             mostraLocomotivas();
-                            mostraLocomotivas();
                             boolean travaMostralocomotivas2 = true;
                             do{
-                                System.out.println("------------------------------------------------------");
-                                System.out.println("            Escolha o que deseja fazer");
-                                System.out.println("        1. Voltar ao menu de garagem");
-                                System.out.println("        2. Voltar ao menu principal");
-                                System.out.println("------------------------------------------------------");
+                                escolheMenu("da garagem");
                                 String menuMostraLocomotivas2 = keyboard.next();
                                 switch(menuMostraLocomotivas2){
                                     case "1":
@@ -159,9 +136,7 @@ public class Main {
                                         switchEdicao = false;
                                         break;
                                     default:
-                                        System.out.println("------------------------------------------------------");
-                                        System.out.println("                Opção inválida");
-                                        System.out.println("------------------------------------------------------");
+                                        opcaoInvalida();
                                         break;
                                 };
                             }while(travaMostralocomotivas2 == true);
@@ -170,11 +145,7 @@ public class Main {
                             mostraVagoes();
                             boolean travaMostraVagoes2 = true;
                             do{
-                                System.out.println("------------------------------------------------------");
-                                System.out.println("            Escolha o que deseja fazer");
-                                System.out.println("        1. Voltar ao menu da garagem");
-                                System.out.println("        2. Voltar ao menu principal");
-                                System.out.println("------------------------------------------------------");
+                                escolheMenu("da garagem");
                                 String menuMostraVagoes2 = keyboard.next();
                                 switch (menuMostraVagoes2) {
                                     case "1":
@@ -185,9 +156,7 @@ public class Main {
                                         switchEdicao = false;
                                         break;
                                     default:
-                                        System.out.println("------------------------------------------------------");
-                                        System.out.println("                Opção inválida");
-                                        System.out.println("------------------------------------------------------");
+                                        opcaoInvalida();
                                         break;
                                 }   
                             }   while(travaMostraVagoes2 == true);
@@ -196,9 +165,7 @@ public class Main {
                             switchEdicao = false;
                             break;
                         default:
-                            System.out.println("------------------------------------------------------");
-                            System.out.println("                Opção inválida");
-                            System.out.println("------------------------------------------------------");
+                            opcaoInvalida();
                             break;
                     }
                 } while (switchEdicao == true);
@@ -219,11 +186,7 @@ public class Main {
                             mostraVagoes();
                             boolean travaMostraVagoes = true;
                             do{
-                                System.out.println("------------------------------------------------------");
-                                System.out.println("            Escolha o que deseja fazer");
-                                System.out.println("        1. Voltar ao menu da garagem");
-                                System.out.println("        2. Voltar ao menu principal");
-                                System.out.println("------------------------------------------------------");
+                                escolheMenu("da garagem");
                                 String menuMostraVagoes = keyboard.next();
                                 switch (menuMostraVagoes) {
                                     case "1":
@@ -234,9 +197,7 @@ public class Main {
                                         switchGaragem = false;
                                         break;
                                     default:
-                                        System.out.println("------------------------------------------------------");
-                                        System.out.println("                Opção inválida");
-                                        System.out.println("------------------------------------------------------");
+                                        opcaoInvalida();
                                         break;
                                 }   
                             }   while(travaMostraVagoes == true);
@@ -245,11 +206,7 @@ public class Main {
                             mostraLocomotivas();
                             boolean travaMostralocomotivas = true;
                             do{
-                                System.out.println("------------------------------------------------------");
-                                System.out.println("            Escolha o que deseja fazer");
-                                System.out.println("        1. Voltar ao menu de garagem");
-                                System.out.println("        2. Voltar ao menu principal");
-                                System.out.println("------------------------------------------------------");
+                                escolheMenu("da garagem");
                                 String menuMostraLocomotivas = keyboard.next();
                                 switch(menuMostraLocomotivas){
                                     case "1":
@@ -260,9 +217,7 @@ public class Main {
                                         switchGaragem = false;
                                         break;
                                     default:
-                                        System.out.println("------------------------------------------------------");
-                                        System.out.println("                Opção inválida");
-                                        System.out.println("------------------------------------------------------");
+                                        opcaoInvalida();
                                         break;
                                 };
                             }while(travaMostralocomotivas == true);
@@ -271,9 +226,7 @@ public class Main {
                             switchGaragem = false;
                             break;
                         default:
-                            System.out.println("------------------------------------------------------");
-                            System.out.println("                Opção inválida");
-                            System.out.println("------------------------------------------------------");
+                            opcaoInvalida();
                             break;
                     }
                 } while (switchGaragem == true);
@@ -290,12 +243,24 @@ public class Main {
                 System.out.println("------------------------------------------------------");
                 return false;
             default:
-                System.out.println("------------------------------------------------------");
-                System.out.println("        Opção inválida tente novamente                ");
-                System.out.println("------------------------------------------------------");
+                opcaoInvalida();
                 break;
         }
         return true;
+    }
+
+    public static void opcaoInvalida(){
+        System.out.println("------------------------------------------------------");
+        System.out.println("                Opção inválida");
+        System.out.println("------------------------------------------------------");
+    }
+
+    public static void escolheMenu(String nomeMenu){
+        System.out.println("------------------------------------------------------");
+        System.out.println("            Escolha o que deseja fazer");
+        System.out.println("        1. Voltar ao menu "+nomeMenu);
+        System.out.println("        2. Voltar ao menu principal");
+        System.out.println("------------------------------------------------------");
     }
 
     public static void mostraVagoes() {
