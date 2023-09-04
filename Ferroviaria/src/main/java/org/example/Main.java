@@ -27,18 +27,18 @@ public class Main {
     }
 
     public static boolean menu() {
-        System.out.println("------------------------------------------------------");
-        System.out.println("Seja Bem-vindo(a) ao centro de controle da ferroviária");
-        System.out.println("------------------------------------------------------");
-        System.out.println("                 Menu de opções");
-        System.out.println("            Digite a opção desejada");
-        System.out.println("            1.  Criar um trem ");
-        System.out.println("            2.  Editar um trem ");
-        System.out.println("            3.  Abrir a garagem ");
-        System.out.println("            4.  Listar trens criados ");
-        System.out.println("            5.  Desfazer um trem");
-        System.out.println("            6.  Encerrar o programa");
-        System.out.println("------------------------------------------------------");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("Seja Bem-vindo(a) ao centro de controle da ferroviária ");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("|                 Menu de opções                      |");
+        System.out.println("|           Digite a opção desejada                   |");
+        System.out.println("|            1.  Criar um trem                        |");
+        System.out.println("|            2.  Editar um trem                       |");
+        System.out.println("|            3.  Abrir a garagem                      |");
+        System.out.println("|            4.  Listar trens criados                 |");
+        System.out.println("|            5.  Desfazer um trem                     |");
+        System.out.println("|            6.  Encerrar o programa                  |");
+        System.out.println("|-----------------------------------------------------|");
         String opcao = keyboard.next();
 
         // Travas menu
@@ -52,13 +52,13 @@ public class Main {
             case "2":
                 do {
                     System.out.println("------------------------------------------------------");
-                    System.out.println("Digite a opção do que você deseja alterar no trem: ");
-                    System.out.println("1.  Adicionar uma locomotiva ao trem ");
-                    System.out.println("2.  Adicionar um vagão ao trem ");
-                    System.out.println("3.  Remover o último vagão do trem ");
-                    System.out.println("4.  Listar as locomotivas livres ");
-                    System.out.println("5.  Listar os vagões livres ");
-                    System.out.println("6.  Encerrar edição do trem ");
+                    System.out.println("Digite a opção do que você deseja alterar no trem:    ");
+                    System.out.println("1.  Adicionar uma locomotiva ao trem                  ");
+                    System.out.println("2.  Adicionar um vagão ao trem                        ");
+                    System.out.println("3.  Remover o último vagão do trem                    ");
+                    System.out.println("4.  Listar as locomotivas livres                      ");
+                    System.out.println("5.  Listar os vagões livres                           ");
+                    System.out.println("6.  Encerrar edição do trem                           ");
                     System.out.println("------------------------------------------------------");
                     String opcaoEdicao = keyboard.next();
                     switch (opcaoEdicao) {
@@ -91,12 +91,12 @@ public class Main {
             case "3":
                 do {
                     System.out.println("------------------------------------------------------");
-                    System.out.println("                 Menu de opções");
+                    System.out.println("                 Menu de opções                       ");
                     System.out.println("------------------------------------------------------");
-                    System.out.println("           Escolha o que você deseja visualizar");
-                    System.out.println("        1.  Mostrar todos os vagões livres ");
-                    System.out.println("        2.  Mostrar todos as locomotivas livres ");
-                    System.out.println("        3.  Voltar ao menu principal");
+                    System.out.println("           Escolha o que você deseja visualizar       ");
+                    System.out.println("        1.  Mostrar todos os vagões livres            ");
+                    System.out.println("        2.  Mostrar todos as locomotivas livres       ");
+                    System.out.println("        3.  Voltar ao menu principal                  ");
                     System.out.println("------------------------------------------------------");
                     String opcaoGaragem = keyboard.next();
                     switch (opcaoGaragem) {
@@ -130,7 +130,7 @@ public class Main {
                 return false;
             default:
                 System.out.println("------------------------------------------------------");
-                System.out.println("        Opção inválida tente novamente       ");
+                System.out.println("        Opção inválida tente novamente                ");
                 System.out.println("------------------------------------------------------");
                 break;
         }
