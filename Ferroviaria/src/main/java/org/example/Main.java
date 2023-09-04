@@ -125,7 +125,7 @@ public class Main {
                             mostraLocomotivas();
                             boolean travaMostralocomotivas2 = true;
                             do{
-                                escolheMenu("da garagem");
+                                escolheMenu("de edição do trem");
                                 String menuMostraLocomotivas2 = keyboard.next();
                                 switch(menuMostraLocomotivas2){
                                     case "1":
@@ -145,7 +145,7 @@ public class Main {
                             mostraVagoes();
                             boolean travaMostraVagoes2 = true;
                             do{
-                                escolheMenu("da garagem");
+                                escolheMenu("de edição do trem");
                                 String menuMostraVagoes2 = keyboard.next();
                                 switch (menuMostraVagoes2) {
                                     case "1":
