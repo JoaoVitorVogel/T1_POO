@@ -59,3 +59,10 @@ engatada. Exemplo: suponha que todas as locomotivas tenham capacidade
 para tracionar 30 vagões. Uma composição com uma locomotiva consegue 
 tracionar 30 vagões, com duas locomotivas 50 vagões e com 3 locomotivas 80
 vagões.
+
+O QUE FALTA FAZER
+Método - Criar um trem
+Adicionar uma locomotiva ao trem 
+Adicionar um vagão ao trem 
+Remover o último vagão do trem 
+Desfazer um trem
