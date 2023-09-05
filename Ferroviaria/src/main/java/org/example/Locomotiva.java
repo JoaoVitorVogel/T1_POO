@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Objects;
 
-public class Locomotiva{
+public class Locomotiva {
 
     private int id;
     private Trem tremAlocado;
@@ -32,13 +32,16 @@ public class Locomotiva{
     }
 
     /*
-    Metodos 'equals' e 'hashCode' sao necessarios para comparar uma locomotiva com outra utilizando
-    seu ID, ao inves de seu pointer na memoria;
+     * Metodos 'equals' e 'hashCode' sao necessarios para comparar uma locomotiva
+     * com outra utilizando
+     * seu ID, ao inves de seu pointer na memoria;
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Locomotiva that = (Locomotiva) o;
         return id == that.id;
     }
