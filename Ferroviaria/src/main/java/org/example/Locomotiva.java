@@ -47,13 +47,13 @@ public class Locomotiva {
 
     @Override
     public String toString() {
-        return "Locomotiva [id = " + id + ", Peso Máximo suportado " + pesoMax + ", quantidade de vagões suportado = "
-                + maxVagoes + ", idComposicao="
-                + idComposicao + "]";
+        return "Locomotiva | ID = " + id + " | Carga máxima = " + pesoMax + " | Quantidade máxima de vagões = "
+                + maxVagoes + ", ID Composição = "
+                + idComposicao;
     }
 
     public String toStringSemComposicao() {
-        return "Locomotiva [id = " + id + ", Peso Máximo suportado = " + pesoMax + ", quantidade de vagões suportado = "
-                + maxVagoes + "]";
+        return "Locomotiva | ID = " + id + " | Carga máxima = " + pesoMax + " | Quantidade máxima de vagões = "
+                + maxVagoes;
     }
 }

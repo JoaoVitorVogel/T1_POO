@@ -36,12 +36,11 @@ public class Vagao {
     }
 
     public String toString() {
-        return "Vagao [id Vagão = " + idVagao + ", capacidade máxima suportada = " + capacidadeMax
-                + ", id Trem onde está sendo usada = " + idComposicao
-                + "]";
+        return "Vagão | ID = " + idVagao + " | Carga máxima = " + capacidadeMax
+                + " | ID Composição = " + idComposicao;
     }
 
     public String toStringSemComposicao() {
-        return "Vagao [id Vagão = " + idVagao + ", capacidade máxima suportada = " + capacidadeMax + "]";
+        return "Vagâo | ID  = " + idVagao + " | Carga máxima = " + capacidadeMax;
     }
 }

@@ -175,7 +175,7 @@ public class Main {
                     System.out.println("------------------------------------------------------");
                     System.out.println("                 Menu de opções                       ");
                     System.out.println("------------------------------------------------------");
-                    System.out.println("           Escolha o que você deseja visualizar       ");
+                    System.out.println("          Escolha o que você deseja visualizar        ");
                     System.out.println("        1.  Mostrar todos os vagões livres            ");
                     System.out.println("        2.  Mostrar todos as locomotivas livres       ");
                     System.out.println("        3.  Voltar ao menu principal                  ");
@@ -239,27 +239,27 @@ public class Main {
                 break;
             case "6":
                 System.out.println("------------------------------------------------------");
-                System.out.println("            Fim do programa");
+                System.out.println("               **Fim do programa**                    ");
                 System.out.println("------------------------------------------------------");
                 return false;
             default:
                 opcaoInvalida();
-                break;
+                break;          
         }
         return true;
     }
 
     public static void opcaoInvalida(){
         System.out.println("------------------------------------------------------");
-        System.out.println("                Opção inválida");
+        System.out.println("                Opção inválida                        ");
         System.out.println("------------------------------------------------------");
     }
 
     public static void escolheMenu(String nomeMenu){
         System.out.println("------------------------------------------------------");
-        System.out.println("            Escolha o que deseja fazer");
-        System.out.println("        1. Voltar ao menu "+nomeMenu);
-        System.out.println("        2. Voltar ao menu principal");
+        System.out.println("           Escolha o que deseja fazer                 ");
+        System.out.println("        1. Voltar ao menu "+nomeMenu                   );
+        System.out.println("        2. Voltar ao menu principal                   ");
         System.out.println("------------------------------------------------------");
     }
 
