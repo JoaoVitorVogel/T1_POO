@@ -346,27 +346,27 @@ public class Main {
                 break;
             case "6":
                 System.out.println("------------------------------------------------------");
-                System.out.println("            Fim do programa");
+                System.out.println("               **Fim do programa**                    ");
                 System.out.println("------------------------------------------------------");
                 return false;
             default:
                 opcaoInvalida();
-                break;
+                break;          
         }
         return true;
     }
 
     public static void opcaoInvalida(){
         System.out.println("------------------------------------------------------");
-        System.out.println("                Opção inválida");
+        System.out.println("                Opção inválida                        ");
         System.out.println("------------------------------------------------------");
     }
 
     public static void escolheMenu(String nomeMenu){
         System.out.println("------------------------------------------------------");
-        System.out.println("            Escolha o que deseja fazer");
-        System.out.println("        1. Voltar ao menu "+nomeMenu);
-        System.out.println("        2. Voltar ao menu principal");
+        System.out.println("           Escolha o que deseja fazer                 ");
+        System.out.println("        1. Voltar ao menu "+nomeMenu                   );
+        System.out.println("        2. Voltar ao menu principal                   ");
         System.out.println("------------------------------------------------------");
     }
 }
