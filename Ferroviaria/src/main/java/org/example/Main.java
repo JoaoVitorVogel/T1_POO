@@ -48,18 +48,7 @@ public class Main {
 
         switch (opcao) {
             case "1":
-                try {
-                        System.out.println("Insira um identificador para o trem:");
-                        int idTrem = keyboard.nextInt();
-
-                        garagem.cadastrarTrem(idTrem);
-                        System.out.println(garagem);
-                    } catch (InvalidParameterException e) {
-                        System.out.println(e.getMessage());
-                    } catch (InputMismatchException e){
-                        System.out.println("Input invalido");
-                        keyboard.nextLine();
-                    }
+                criaTrem();
                 break;
             case "2":
                 do {
@@ -76,21 +65,7 @@ public class Main {
                     String opcaoEdicao = keyboard.next();
                     switch (opcaoEdicao) {
                         case "1":
-                        try {
-                            System.out.println("Insira o ID do trem:");
-                            int idTrem = keyboard.nextInt();
-    
-                            System.out.println("Insira o ID da locomotiva");
-                            int idLocomotiva = keyboard.nextInt();
-    
-                            garagem.alocarLocomotiva(garagem.getLocomotiva(idLocomotiva), garagem.getTrem(idTrem));
-                            System.out.println(garagem);
-                        } catch (InvalidParameterException e) {
-                            System.out.println(e.getMessage());
-                        } catch (InputMismatchException e){
-                            System.out.println("Input invalido");
-                            keyboard.nextLine();
-                        }
+                            adicionaLocomotiva();
                             boolean travaAddLocomotiva = true;
                             do{
                                 escolheMenu("de edição do trem");
@@ -111,21 +86,7 @@ public class Main {
                             break;
 
                         case "2":
-                            try {
-                                System.out.println("Insira o ID do trem:");
-                                int idTrem = keyboard.nextInt();
-
-                                System.out.println("Insira o ID do vagao:");
-                                int idVagao = keyboard.nextInt();
-
-                                garagem.alocarVagao(garagem.getVagao(idVagao), garagem.getTrem(idTrem));
-                                System.out.println(garagem);
-                            } catch (InvalidParameterException e) {
-                                System.out.println(e.getMessage());
-                            } catch (InputMismatchException e){
-                                System.out.println("Input invalido");
-                                keyboard.nextLine();
-                            }
+                            adicionaVagao();
                             boolean travaAddVagao = true;
                             do{
                                 escolheMenu("de edição do trem");
@@ -368,5 +329,56 @@ public class Main {
         System.out.println("        1. Voltar ao menu "+nomeMenu                   );
         System.out.println("        2. Voltar ao menu principal                   ");
         System.out.println("------------------------------------------------------");
+    }
+
+    public static void criaTrem(){
+        try {
+            System.out.println("Insira um identificador para o trem:");
+            int idTrem = keyboard.nextInt();
+
+            garagem.cadastrarTrem(idTrem);
+            System.out.println(garagem);
+        } catch (InvalidParameterException e) {
+            System.out.println(e.getMessage());
+        } catch (InputMismatchException e){
+            System.out.println("Input invalido");
+            keyboard.nextLine();
+        }
+    }
+
+    public static void adicionaLocomotiva(){
+        try {
+            System.out.println("Insira o ID do trem:");
+            int idTrem = keyboard.nextInt();
+
+            System.out.println("Insira o ID da locomotiva");
+            int idLocomotiva = keyboard.nextInt();
+
+            garagem.alocarLocomotiva(garagem.getLocomotiva(idLocomotiva), garagem.getTrem(idTrem));
+            System.out.println(garagem);
+        } catch (InvalidParameterException e) {
+            System.out.println(e.getMessage());
+        } catch (InputMismatchException e){
+            System.out.println("Input invalido");
+            keyboard.nextLine();
+        }
+    }
+
+    public static void adicionaVagao(){
+        try {
+            System.out.println("Insira o ID do trem:");
+            int idTrem = keyboard.nextInt();
+
+            System.out.println("Insira o ID do vagao:");
+            int idVagao = keyboard.nextInt();
+
+            garagem.alocarVagao(garagem.getVagao(idVagao), garagem.getTrem(idTrem));
+            System.out.println(garagem);
+        } catch (InvalidParameterException e) {
+            System.out.println(e.getMessage());
+        } catch (InputMismatchException e){
+            System.out.println("Input invalido");
+            keyboard.nextLine();
+        }
     }
 }
