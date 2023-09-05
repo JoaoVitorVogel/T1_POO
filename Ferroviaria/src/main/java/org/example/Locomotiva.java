@@ -1,59 +1,50 @@
 package org.example;
 
-public class Locomotiva {
-    private int id;
-    private double pesoMax;
-    private int maxVagoes;
-    private int idComposicao;
+import java.util.Objects;
 
-    public Locomotiva(int id, double pesoMax, int maxVagoes, int idComposicao) {
+public class Locomotiva{
+
+    private int id;
+    private Trem tremAlocado;
+    private double pesoMaximo; // implementação necessária
+    private int limiteVagoes; // implementação necessária
+
+    protected Locomotiva(int id, double pesoMaximo) {
         this.id = id;
-        this.pesoMax = pesoMax;
-        this.maxVagoes = maxVagoes;
-        this.idComposicao = idComposicao;
+        this.pesoMaximo = pesoMaximo;
     }
 
-    public int getId() {
+    protected int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    protected Trem getTremAlocado() {
+        return tremAlocado;
     }
 
-    public double getPesoMax() {
-        return pesoMax;
-    }
-
-    public void setPesoMax(double pesoMax) {
-        this.pesoMax = pesoMax;
-    }
-
-    public int getMaxVagoes() {
-        return maxVagoes;
-    }
-
-    public void setMaxVagoes(int maxVagoes) {
-        this.maxVagoes = maxVagoes;
-    }
-
-    public int getIdComposicao() {
-        return idComposicao;
-    }
-
-    public void setIdComposicao(int idComposicao) {
-        this.idComposicao = idComposicao;
+    protected void setTremAlocado(Trem tremAlocado) {
+        this.tremAlocado = tremAlocado;
     }
 
     @Override
     public String toString() {
-        return "Locomotiva [id = " + id + ", Peso Máximo suportado " + pesoMax + ", quantidade de vagões suportado = "
-                + maxVagoes + ", idComposicao="
-                + idComposicao + "]";
+        return "L" + Integer.toString(id);
     }
 
-    public String toStringSemComposicao() {
-        return "Locomotiva [id = " + id + ", Peso Máximo suportado = " + pesoMax + ", quantidade de vagões suportado = "
-                + maxVagoes + "]";
+    /*
+    Metodos 'equals' e 'hashCode' sao necessarios para comparar uma locomotiva com outra utilizando
+    seu ID, ao inves de seu pointer na memoria;
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Locomotiva that = (Locomotiva) o;
+        return id == that.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

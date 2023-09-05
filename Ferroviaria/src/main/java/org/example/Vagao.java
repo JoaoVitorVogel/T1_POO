@@ -1,47 +1,49 @@
 package org.example;
 
-public class Vagao {
-    private int idVagao;
-    private double capacidadeMax;
-    private int idComposicao;
+import java.util.Objects;
 
-    public Vagao(int idVagao, double capacidadeMax, int idComposicao) {
-        this.idVagao = idVagao;
-        this.capacidadeMax = capacidadeMax;
-        this.idComposicao = idComposicao;
+public class Vagao{
+
+    private int id;
+    private Trem tremAlocado;
+    private double capacidadeCarga; // necessita de implementação
+
+    protected Vagao(int id, double capacidadeCarga){
+        this.id = id;
+        this.capacidadeCarga = capacidadeCarga;
     }
 
-    public int getIdVagao() {
-        return idVagao;
+    protected int getId() {
+        return id;
     }
 
-    public void setIdVagao(int idVagao) {
-        this.idVagao = idVagao;
+    protected Trem getTremAlocado() {
+        return tremAlocado;
     }
 
-    public double getCapacidadeMax() {
-        return capacidadeMax;
+    protected void setTremAlocado(Trem tremAlocado) {
+        this.tremAlocado = tremAlocado;
     }
 
-    public void setCapacidadeMax(double capacidadeMax) {
-        this.capacidadeMax = capacidadeMax;
-    }
-
-    public int getIdComposicao() {
-        return idComposicao;
-    }
-
-    public void setIdComposicao(int idComposicao) {
-        this.idComposicao = idComposicao;
-    }
-
+    @Override
     public String toString() {
-        return "Vagao [id Vagão = " + idVagao + ", capacidade máxima suportada = " + capacidadeMax
-                + ", id Trem onde está sendo usada = " + idComposicao
-                + "]";
+        return "V" + Integer.toString(id);
     }
 
-    public String toStringSemComposicao() {
-        return "Vagao [id Vagão = " + idVagao + ", capacidade máxima suportada = " + capacidadeMax + "]";
+    /*
+    Metodos 'equals' e 'hashCode' sao necessarios para comparar um vagao com outro utilizando
+    seu ID, ao inves de seu pointer na memoria;
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vagao vagao = (Vagao) o;
+        return id == vagao.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
