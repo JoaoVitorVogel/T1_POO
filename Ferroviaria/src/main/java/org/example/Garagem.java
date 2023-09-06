@@ -242,14 +242,14 @@ public class Garagem {
 
     @Override
     public String toString() {
-        String text = " GARAGENS: "          +
-                "\nGaragem de Locomotivas: " + 
+        String text = "    GARAGENS: "       +
+                "\n Garagem de Locomotivas: "+ 
                 "\n " + garagemLocomotivas   +
                 "\n "                        +
-                "\nGaragem de Vagoes: "      + 
+                "\n Garagem de Vagoes: "     + 
                 "\n " + garagemVagoes        +
                 "\n "                        +
-                "\nGaragem de Trens: ";
+                "\n Garagem de Trens: ";
 
         if (garagemTrens.isEmpty()) {
             return text + "<vazia>";
