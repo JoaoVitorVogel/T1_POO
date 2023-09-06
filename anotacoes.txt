@@ -62,6 +62,8 @@ vagões.
 
 O QUE FALTA FAZER
 //Arrumar o ToString das garagens
-//Abrir o menu de edição do trem
+//Atributos pesomax, capacidadeCarga e limiteVagoes
+//Controlar quantos vagoes cada locomotiva leva
+//Aumentar o tamanho de vagoes de locomotivas 
 //Testar métodos remove vagão e locomotiva, desfazer trem
 //Métodos mostrar locomotivas e vagões livres
