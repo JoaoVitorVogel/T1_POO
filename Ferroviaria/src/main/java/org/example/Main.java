@@ -57,37 +57,7 @@ public class Main {
                 System.out.println(garagem);
                 break;
             case "4":
-                try {
-                    System.out.println("Insira o ID da unidade: (Ex: 'L1', 'V2')");
-                    String input = keyboard.next().toUpperCase();
-                    if (input.startsWith("L")) {
-                        String idChar = input.replace("L", "");
-                        int id = Integer.parseInt(idChar);
-
-                        try {
-                            System.out.println("Unidade alocada ao: T" + garagem.inspecionarLocomotiva(id));
-                        } catch (InputMismatchException e) {
-                            System.out.println(e.getMessage());
-                        }
-                    } else if (input.startsWith("V")) {
-                        String idChar = input.replace("L", "");
-                        int id = Integer.parseInt(idChar);
-
-                        try {
-                            System.out.println("Unidade alocada ao: T" + garagem.inspecionarVagao(id));
-                        } catch (InputMismatchException e) {
-                            System.out.println(e.getMessage());
-                        }
-                    } else {
-                        System.out.println("O ID inserido nao e valido");
-                    }
-
-                } catch (InvalidParameterException e) {
-                    System.out.println(e.getMessage());
-                } catch (InputMismatchException e) {
-                    System.out.println("Input invalido");
-                    keyboard.nextLine();
-                }
+                mostrarGaragem();
                 break;
             case "5":
                 desfazerTrem();
@@ -206,6 +176,40 @@ public class Main {
 
             garagem.desfazerTrem(garagem.getTrem(idTrem));
             System.out.println(garagem);
+        } catch (InvalidParameterException e) {
+            System.out.println(e.getMessage());
+        } catch (InputMismatchException e) {
+            System.out.println("Input invalido");
+            keyboard.nextLine();
+        }
+    }
+
+    public static void mostrarGaragem() {
+        try {
+            System.out.println("Insira o ID da unidade: (Ex: 'L1', 'V2')");
+            String input = keyboard.next().toUpperCase();
+            if (input.startsWith("L")) {
+                String idChar = input.replace("L", "");
+                int id = Integer.parseInt(idChar);
+
+                try {
+                    System.out.println("Unidade alocada ao: T" + garagem.inspecionarLocomotiva(id));
+                } catch (InputMismatchException e) {
+                    System.out.println(e.getMessage());
+                }
+            } else if (input.startsWith("V")) {
+                String idChar = input.replace("L", "");
+                int id = Integer.parseInt(idChar);
+
+                try {
+                    System.out.println("Unidade alocada ao: T" + garagem.inspecionarVagao(id));
+                } catch (InputMismatchException e) {
+                    System.out.println(e.getMessage());
+                }
+            } else {
+                System.out.println("O ID inserido nao e valido");
+            }
+
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
