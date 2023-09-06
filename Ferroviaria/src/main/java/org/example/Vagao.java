@@ -6,7 +6,7 @@ public class Vagao{
 
     private int id;
     private Trem tremAlocado;
-    private double capacidadeCarga; // necessita de implementação
+    private double capacidadeCarga; // valor inserido no constructor
 
     protected Vagao(int id, double capacidadeCarga){
         this.id = id;
@@ -23,6 +23,10 @@ public class Vagao{
 
     protected void setTremAlocado(Trem tremAlocado) {
         this.tremAlocado = tremAlocado;
+    }
+
+    public double getCapacidadeCarga() {
+        return capacidadeCarga;
     }
 
     @Override

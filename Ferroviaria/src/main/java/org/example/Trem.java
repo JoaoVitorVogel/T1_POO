@@ -7,6 +7,7 @@ import java.util.Objects;
 public class Trem {
 
     private int id;
+    private int capacidadeDeVagoes;
     private List<Locomotiva> listaLocomotivas = new ArrayList<>();
     private List<Vagao> listaVagoes = new ArrayList<>();
 
@@ -16,10 +17,31 @@ public class Trem {
 
     protected void addLocomotiva(Locomotiva locomotiva){
         listaLocomotivas.add(locomotiva);
+        capacidadeDeVagoes = getCapacidadeDeVagoes();
     }
 
-    protected void addVagao(Vagao vagao){
-        listaVagoes.add(vagao);
+    public int getCapacidadeDeVagoes() {
+        if (listaLocomotivas.size() == 1){
+            return listaLocomotivas.get(0).getLimiteVagoes();
+        } else {
+            int capacidade = 0;
+            for (Locomotiva l : listaLocomotivas){
+                capacidade += l.getLimiteVagoes();
+            }
+            return capacidadeDeVagoes - 10;
+        }
+    }
+
+    public void setCapacidadeDeVagoes(int capacidadeDeVagoes) {
+        this.capacidadeDeVagoes = capacidadeDeVagoes;
+    }
+
+    protected void addVagao(Vagao vagao) throws ArrayIndexOutOfBoundsException {
+        if (listaVagoes.size() < capacidadeDeVagoes){
+            listaVagoes.add(vagao);
+        } else {
+            throw new ArrayIndexOutOfBoundsException("O limite de vagoes deste trem ja foi atingido");
+        }
     }
 
     protected int getId() {

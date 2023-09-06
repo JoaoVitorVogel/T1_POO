@@ -6,8 +6,8 @@ public class Locomotiva {
 
     private int id;
     private Trem tremAlocado;
-    private double pesoMaximo; // implementação necessária
-    private int limiteVagoes; // implementação necessária
+    private double pesoMaximo; // inserido no constructor
+    private int limiteVagoes;
 
     protected Locomotiva(int id, double pesoMaximo) {
         this.id = id;
@@ -24,6 +24,14 @@ public class Locomotiva {
 
     protected void setTremAlocado(Trem tremAlocado) {
         this.tremAlocado = tremAlocado;
+    }
+
+    public int getLimiteVagoes() {
+        return limiteVagoes;
+    }
+
+    public void setLimiteVagoes(int limiteVagoes) {
+        this.limiteVagoes = limiteVagoes;
     }
 
     @Override

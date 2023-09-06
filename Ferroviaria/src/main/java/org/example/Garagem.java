@@ -230,8 +230,8 @@ public class Garagem {
 
     @Override
     public String toString() {
-        String text = "GARAGENS:\n" +
-                "Locomotivas:\n" +
+        String text = "GARAGENS:" +
+                "\n Garagem de Locomotivas:\n" +
                 garagemLocomotivas +
                 "\n Garagem de Vagoes:\n" +
                 garagemVagoes +
@@ -240,7 +240,11 @@ public class Garagem {
         if (garagemTrens.isEmpty()) {
             return text + "<vazia>";
         } else {
-            return text + garagemTrens;
+            String tremList = "";
+            for (Trem t : garagemTrens){
+                tremList = tremList.concat(t.toString() + "\n");
+            }
+            return text + tremList;
         }
     }
 }
