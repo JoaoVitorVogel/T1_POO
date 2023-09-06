@@ -61,9 +61,7 @@ tracionar 30 vagões, com duas locomotivas 50 vagões e com 3 locomotivas 80
 vagões.
 
 O QUE FALTA FAZER
-//Atributos pesomax, capacidadeCarga e limiteVagoes
 //Controlar quantos vagoes cada locomotiva leva
 //Aumentar o tamanho de vagoes de locomotivas 
-//Arrumar 
-//Métodos mostrar locomotivas e vagões livres
+
 
