@@ -60,8 +60,5 @@ para tracionar 30 vagões. Uma composição com uma locomotiva consegue
 tracionar 30 vagões, com duas locomotivas 50 vagões e com 3 locomotivas 80
 vagões.
 
-O QUE FALTA FAZER
-//Controlar quantos vagoes cada locomotiva leva
-//Aumentar o tamanho de vagoes de locomotivas 
 
 

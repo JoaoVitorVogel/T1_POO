@@ -7,7 +7,7 @@ public class Locomotiva {
     private int id;
     private Trem tremAlocado;
     private double pesoMaximo; // inserido no constructor
-    private int limiteVagoes;
+    private int limiteVagoes = 5;
 
     protected Locomotiva(int id, double pesoMaximo) {
         this.id = id;
