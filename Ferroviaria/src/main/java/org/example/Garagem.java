@@ -238,7 +238,7 @@ public class Garagem {
         if (garagemTrens.isEmpty()) {
             return text + "<vazia>";
         } else {
-            return text + garagemTrens;
+            return text + "n" + garagemTrens;
         }
     }
 }
