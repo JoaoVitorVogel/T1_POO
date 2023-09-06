@@ -67,46 +67,12 @@ public class Main {
                     String opcaoGaragem = keyboard.next();
                     switch (opcaoGaragem) {
                         case "1":
-                            
-                            boolean travaMostraVagoes = true;
-                            do {
-                                escolheMenu("da garagem");
-                                String menuMostraVagoes = keyboard.next();
-                                switch (menuMostraVagoes) {
-                                    case "1":
-                                        travaMostraVagoes = false;
-                                        break;
-                                    case "2":
-                                        travaMostraVagoes = false;
-                                        switchGaragem = false;
-                                        break;
-                                    default:
-                                        opcaoInvalida();
-                                        break;
-                                }
-                            } while (travaMostraVagoes == true);
+                            switchGaragem = opcaoDeMenu();
                             break;
                         case "2":
-                            boolean travaMostralocomotivas = true;
-                            do {
-                                escolheMenu("da garagem");
-                                String menuMostraLocomotivas = keyboard.next();
-                                switch (menuMostraLocomotivas) {
-                                    case "1":
-                                        travaMostralocomotivas = false;
-                                        break;
-                                    case "2":
-                                        travaMostralocomotivas = false;
-                                        switchGaragem = false;
-                                        break;
-                                    default:
-                                        opcaoInvalida();
-                                        break;
-                                } 
-                            }while (travaMostralocomotivas == true);
+                            switchGaragem = opcaoDeMenu();
                             break;
                         case "3":
-                            boolean travaPesquisar = true;
                             try {
                                 System.out.println("Insira o ID da unidade: (Ex: 'L1', 'V2')");
                                 String input = keyboard.next().toUpperCase();
@@ -138,22 +104,7 @@ public class Main {
                                     System.out.println("Input invalido");
                                     keyboard.nextLine();
                             }
-                            do{
-                                escolheMenu("da garagem");
-                                String menuPesquisar = keyboard.next();
-                                switch (menuPesquisar) {
-                                    case "1":
-                                        travaPesquisar = false;
-                                        break;
-                                    case "2":
-                                        travaPesquisar = false;
-                                        switchGaragem = false;
-                                        break;
-                                    default:
-                                        opcaoInvalida();
-                                        break;
-                                } 
-                            }while(travaPesquisar == true);
+                            switchGaragem = opcaoDeMenu();
                             break;
                         case "4":
                             switchGaragem = false;
@@ -292,6 +243,25 @@ public class Main {
         }
     }
 
+    public static boolean opcaoDeMenu(){
+        boolean travaAddLocomotiva = true;
+        do {
+            escolheMenu("de edição do trem");
+            String menuAddLocomotiva = keyboard.next();
+            switch (menuAddLocomotiva) {
+                case "1":
+                    travaAddLocomotiva = false;
+                    return true;
+                case "2":
+                    travaAddLocomotiva = false;
+                    return false;
+                default:
+                    opcaoInvalida();
+                    return true;
+            }
+        } while (travaAddLocomotiva == true);
+    } 
+
     public static void menuEditar(){
         boolean switchEdicao = true;
         do {
@@ -310,128 +280,30 @@ public class Main {
             switch (opcaoEdicao) {
                 case "1":
                     adicionaLocomotiva();
-                    boolean travaAddLocomotiva = true;
-                    do {
-                        escolheMenu("de edição do trem");
-                        String menuAddLocomotiva = keyboard.next();
-                        switch (menuAddLocomotiva) {
-                            case "1":
-                                travaAddLocomotiva = false;
-                                break;
-                            case "2":
-                                travaAddLocomotiva = false;
-                                switchEdicao = false;
-                                break;
-                            default:
-                                opcaoInvalida();
-                                break;
-                        }
-                    } while (travaAddLocomotiva == true);
+                    switchEdicao = opcaoDeMenu();
                     break;
 
                 case "2":
                     adicionaVagao();
-                    boolean travaAddVagao = true;
-                    do {
-                        escolheMenu("de edição do trem");
-                        String menuAddVagoes = keyboard.next();
-                        switch (menuAddVagoes) {
-                            case "1":
-                                travaAddVagao = false;
-                                break;
-                            case "2":
-                                travaAddVagao = false;
-                                switchEdicao = false;
-                                break;
-                            default:
-                                opcaoInvalida();
-                                break;
-                        }
-                    } while (travaAddVagao == true);
+                    switchEdicao = opcaoDeMenu();
                     break;
 
                 case "3": // remove locomotiva
                     removeLocomotiva();
-                    boolean travaRemoveLocomotivas = true;
-                    do {
-                        escolheMenu("de edição do trem");
-                        String menuRemoveLocomotivas = keyboard.next();
-                        switch (menuRemoveLocomotivas) {
-                            case "1":
-                                travaRemoveLocomotivas = false;
-                                break;
-                            case "2":
-                                travaRemoveLocomotivas = false;
-                                switchEdicao = false;
-                                break;
-                            default:
-                                opcaoInvalida();
-                                break;
-                        }
-                    } while (travaRemoveLocomotivas == true);
+                    switchEdicao = opcaoDeMenu();
                     break;
 
                 case "4": // remove vagao
                     removeVagao();
-                    boolean travaRemoveVagoes = true;
-                    do {
-                        escolheMenu("de edição do trem");
-                        String menuRemoveVagoes = keyboard.next();
-                        switch (menuRemoveVagoes) {
-                            case "1":
-                                travaRemoveVagoes = false;
-                                break;
-                            case "2":
-                                travaRemoveVagoes = false;
-                                switchEdicao = false;
-                            default:
-                                opcaoInvalida();
-                                break;
-                        }
-                    } while (travaRemoveVagoes == true);
+                    switchEdicao = opcaoDeMenu();
                     break;
 
                 case "5": // Mostra locomotivas livres
-
-                    boolean travaMostralocomotivas2 = true;
-                    do {
-                        escolheMenu("de edição do trem");
-                        String menuMostraLocomotivas2 = keyboard.next();
-                        switch (menuMostraLocomotivas2) {
-                            case "1":
-                                travaMostralocomotivas2 = false;
-                                break;
-                            case "2":
-                                travaMostralocomotivas2 = false;
-                                switchEdicao = false;
-                                break;
-                            default:
-                                opcaoInvalida();
-                                break;
-                        }
-
-                    } while (travaMostralocomotivas2 == true);
+                    switchEdicao = opcaoDeMenu();
                     break;
 
                 case "6": // mostra vagoes livres
-
-                    boolean travaMostraVagoes2 = true;
-                    do {
-                        escolheMenu("de edição do trem");
-                        String menuMostraVagoes2 = keyboard.next();
-                        switch (menuMostraVagoes2) {
-                            case "1":
-                                travaMostraVagoes2 = false;
-                                break;
-                            case "2":
-                                travaMostraVagoes2 = false;
-                                switchEdicao = false;
-                                break;
-                            default:
-                                opcaoInvalida();
-                                break;
-                        }
-                    } while (travaMostraVagoes2 == true);
+                    switchEdicao = opcaoDeMenu();
                     break;
 
                 case "7":
