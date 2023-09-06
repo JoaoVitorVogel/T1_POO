@@ -42,13 +42,19 @@ public class Garagem {
      * locomotivas nao usadas
      */
     public void alocarLocomotiva(Locomotiva locomotiva, Trem trem) throws InvalidParameterException {
-        if (!trem.getListaVagoes().isEmpty()) {
-            throw new InvalidParameterException(
-                    "Nao é possivel alocar locomotivas a unidades com vagoes ja acoplados.");
+        if (garagemLocomotivas.isEmpty()){
+            throw new InvalidParameterException("A garagem de locomotivas esta vazia");
+        } else if (!garagemLocomotivas.get(garagemLocomotivas.size()-1).equals(locomotiva)){
+            throw new InvalidParameterException("A locomotiva informada nao esta acessivel. Apenas a ultima unidade da garagem pode ser retirada");
+        } else {
+            if (!trem.getListaVagoes().isEmpty()) {
+                throw new InvalidParameterException(
+                        "Nao é possivel alocar locomotivas a unidades com vagoes ja acoplados.");
+            }
+            locomotiva.setTremAlocado(trem);
+            trem.addLocomotiva(locomotiva);
+            garagemLocomotivas.remove(locomotiva);
         }
-        locomotiva.setTremAlocado(trem);
-        trem.addLocomotiva(locomotiva);
-        garagemLocomotivas.remove(locomotiva);
     }
 
     /*
@@ -62,12 +68,18 @@ public class Garagem {
      * usadas
      */
     public void alocarVagao(Vagao vagao, Trem trem) throws InvalidParameterException {
-        if (trem.getListaLocomotivas().isEmpty()) {
-            throw new InvalidParameterException("Não é possível alocar vagoes a unidades sem locomotivas acopladas.");
+        if (garagemVagoes.isEmpty()){
+            throw new InvalidParameterException("A garagem de vagoes esta vazia");
+        } else if (!garagemVagoes.get(garagemVagoes.size()-1).equals(vagao)){
+            throw new InvalidParameterException("O vagao informado nao esta acessivel. Apenas a ultima unidade da garagem pode ser retirada");
+        } else {
+            if (trem.getListaLocomotivas().isEmpty()) {
+                throw new InvalidParameterException("Não é possível alocar vagoes a unidades sem locomotivas acopladas.");
+            }
+            vagao.setTremAlocado(trem);
+            trem.addVagao(vagao);
+            garagemVagoes.remove(vagao);
         }
-        vagao.setTremAlocado(trem);
-        trem.addVagao(vagao);
-        garagemVagoes.remove(vagao);
     }
 
     /*

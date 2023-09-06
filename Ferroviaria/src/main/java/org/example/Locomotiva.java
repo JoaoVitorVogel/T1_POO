@@ -26,12 +26,8 @@ public class Locomotiva {
         this.tremAlocado = tremAlocado;
     }
 
-    public int getLimiteVagoes() {
+    protected int getLimiteVagoes() {
         return limiteVagoes;
-    }
-
-    public void setLimiteVagoes(int limiteVagoes) {
-        this.limiteVagoes = limiteVagoes;
     }
 
     @Override
