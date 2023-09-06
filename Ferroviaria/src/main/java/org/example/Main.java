@@ -8,16 +8,20 @@ public class Main {
     static Scanner keyboard = new Scanner(System.in);
 
     private static final double PESO_MAXIMO = 5;
-    private static final int ENTIDADES_INICIAIS = 10;
+    private static final int VAGOES_INICIAIS = 100;
+    private static final int LOCOMOTIVA_INICIAIS = 10;
     private static final int CAPACIDADE_CARGA = 6;
 
     static Garagem garagem = new Garagem();
 
     public static void criaEmpresa() { // Método para criar as locomotivas e vagões
 
-        for (int i = 0; i < ENTIDADES_INICIAIS; i++) {
-            garagem.cadastrarLocomotiva(i, PESO_MAXIMO);
+        for (int i = 0; i < VAGOES_INICIAIS; i++) {
             garagem.cadastrarVagao(i, CAPACIDADE_CARGA);
+        }
+
+        for (int i = 0; i < LOCOMOTIVA_INICIAIS; i++) {
+            garagem.cadastrarLocomotiva(i, PESO_MAXIMO);
         }
     }
 
@@ -53,37 +57,37 @@ public class Main {
                 System.out.println(garagem);
                 break;
             case "4":
-            try {
-                System.out.println("Insira o ID da unidade: (Ex: 'L1', 'V2')");
-                String input = keyboard.next().toUpperCase();
-                if (input.startsWith("L")) {
-                    String idChar = input.replace("L", "");
-                    int id = Integer.parseInt(idChar);
+                try {
+                    System.out.println("Insira o ID da unidade: (Ex: 'L1', 'V2')");
+                    String input = keyboard.next().toUpperCase();
+                    if (input.startsWith("L")) {
+                        String idChar = input.replace("L", "");
+                        int id = Integer.parseInt(idChar);
 
-                    try {
-                        System.out.println("Unidade alocada ao: T" + garagem.inspecionarLocomotiva(id));
-                    } catch (InputMismatchException e) {
-                        System.out.println(e.getMessage());
-                    }
-                } else if (input.startsWith("V")) {
-                    String idChar = input.replace("L", "");
-                    int id = Integer.parseInt(idChar);
+                        try {
+                            System.out.println("Unidade alocada ao: T" + garagem.inspecionarLocomotiva(id));
+                        } catch (InputMismatchException e) {
+                            System.out.println(e.getMessage());
+                        }
+                    } else if (input.startsWith("V")) {
+                        String idChar = input.replace("L", "");
+                        int id = Integer.parseInt(idChar);
 
-                    try {
-                        System.out.println("Unidade alocada ao: T" + garagem.inspecionarVagao(id));
-                    } catch (InputMismatchException e) {
-                        System.out.println(e.getMessage());
+                        try {
+                            System.out.println("Unidade alocada ao: T" + garagem.inspecionarVagao(id));
+                        } catch (InputMismatchException e) {
+                            System.out.println(e.getMessage());
+                        }
+                    } else {
+                        System.out.println("O ID inserido nao e valido");
                     }
-                } else {
-                    System.out.println("O ID inserido nao e valido");
-                }
 
                 } catch (InvalidParameterException e) {
                     System.out.println(e.getMessage());
                 } catch (InputMismatchException e) {
                     System.out.println("Input invalido");
                     keyboard.nextLine();
-            }  
+                }
                 break;
             case "5":
                 desfazerTrem();
@@ -210,7 +214,7 @@ public class Main {
         }
     }
 
-    public static boolean opcaoDeMenu(){
+    public static boolean opcaoDeMenu() {
         boolean trava = true;
         do {
             escolheMenu("de edição do trem");
@@ -227,9 +231,9 @@ public class Main {
                     return true;
             }
         } while (trava == true);
-    } 
+    }
 
-    public static void menuEditar(){
+    public static void menuEditar() {
         boolean switchEdicao = true;
         do {
             System.out.println("-------------------------------------------------------");
