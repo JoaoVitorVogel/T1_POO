@@ -238,7 +238,11 @@ public class Garagem {
         if (garagemTrens.isEmpty()) {
             return text + "<vazia>";
         } else {
-            return text + garagemTrens;
+            String tremList = "";
+            for (Trem t : garagemTrens){
+                tremList = tremList.concat(t.toString() + "\n");
+            }
+            return text + tremList;
         }
     }
 }
