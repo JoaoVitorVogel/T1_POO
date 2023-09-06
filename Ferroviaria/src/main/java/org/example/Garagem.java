@@ -242,15 +242,19 @@ public class Garagem {
 
     @Override
     public String toString() {
-        String text = " GARAGENS: " +
-                "\nGaragem de Locomotivas: " + garagemLocomotivas +
-                "\nGaragem de Vagoes: " + garagemVagoes +
+        String text = " GARAGENS: "          +
+                "\nGaragem de Locomotivas: " + 
+                "\n " + garagemLocomotivas   +
+                "\n "                        +
+                "\nGaragem de Vagoes: "      + 
+                "\n " + garagemVagoes        +
+                "\n "                        +
                 "\nGaragem de Trens: ";
 
         if (garagemTrens.isEmpty()) {
             return text + "<vazia>";
         } else {
-            String tremList = "";
+            String tremList = "\n";
             for (Trem t : garagemTrens){
                 tremList = tremList.concat(t.toString() + "\n");
             }
