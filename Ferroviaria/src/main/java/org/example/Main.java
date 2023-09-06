@@ -8,7 +8,7 @@ public class Main {
     static Scanner keyboard = new Scanner(System.in);
 
     private static final double PESO_MAXIMO = 5;
-    private static final int VAGOES_INICIAIS = 100;
+    private static final int VAGOES_INICIAIS = 50;
     private static final int LOCOMOTIVA_INICIAIS = 10;
     private static final int CAPACIDADE_CARGA = 6;
 
