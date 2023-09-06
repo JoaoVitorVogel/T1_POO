@@ -61,9 +61,9 @@ tracionar 30 vagões, com duas locomotivas 50 vagões e com 3 locomotivas 80
 vagões.
 
 O QUE FALTA FAZER
-//Arrumar o ToString das garagens
 //Atributos pesomax, capacidadeCarga e limiteVagoes
 //Controlar quantos vagoes cada locomotiva leva
 //Aumentar o tamanho de vagoes de locomotivas 
-//Testar métodos remove vagão e locomotiva, desfazer trem
+//Arrumar 
 //Métodos mostrar locomotivas e vagões livres
+
