@@ -214,7 +214,7 @@ public class Main {
                     switch (opcaoGaragem) {
                         case "1":
                             try {
-                                System.out.println("Insira a ID da unidade: (eg: 'L1', 'V2')");
+                                System.out.println("Insira o ID da unidade: (Ex: 'L1', 'V2')");
                                 String input = keyboard.next().toUpperCase();
                                 if (input.startsWith("L")) {
                                     String idChar = input.replace("L", "");
@@ -317,15 +317,15 @@ public class Main {
 
     public static void escolheMenu(String nomeMenu) {
         System.out.println("------------------------------------------------------");
-        System.out.println("           Escolha travaRemoveLocomotivas que deseja fazer                 ");
-        System.out.println("        1. Voltar ao menu " + nomeMenu);
-        System.out.println("        2. Voltar ao menu principal                   ");
+        System.out.println("       Escolha travaRemoveLocomotivas que deseja fazer");
+        System.out.println("      1. Voltar ao menu " + nomeMenu                   );
+        System.out.println("      2. Voltar ao menu principal                     ");
         System.out.println("------------------------------------------------------");
     }
 
     public static void criaTrem() {
         try {
-            System.out.println("Insira um identificador para travaRemoveLocomotivas trem:");
+            System.out.println("Insira um identificador para o trem:");
             int idTrem = keyboard.nextInt();
 
             garagem.cadastrarTrem(idTrem);
@@ -340,10 +340,10 @@ public class Main {
 
     public static void adicionaLocomotiva() {
         try {
-            System.out.println("Insira travaRemoveLocomotivas ID do trem:");
+            System.out.println("Insira o ID do trem: ");
             int idTrem = keyboard.nextInt();
 
-            System.out.println("Insira travaRemoveLocomotivas ID da locomotiva");
+            System.out.println("Insira o ID da locomotiva: ");
             int idLocomotiva = keyboard.nextInt();
 
             garagem.alocarLocomotiva(garagem.getLocomotiva(idLocomotiva), garagem.getTrem(idTrem));
@@ -358,10 +358,10 @@ public class Main {
 
     public static void adicionaVagao() {
         try {
-            System.out.println("Insira travaRemoveLocomotivas ID do trem:");
+            System.out.println("Insira o ID do trem:");
             int idTrem = keyboard.nextInt();
 
-            System.out.println("Insira travaRemoveLocomotivas ID do vagao:");
+            System.out.println("Insira o ID do vagão:");
             int idVagao = keyboard.nextInt();
 
             garagem.alocarVagao(garagem.getVagao(idVagao), garagem.getTrem(idTrem));
@@ -376,7 +376,7 @@ public class Main {
 
     public static void removeLocomotiva() {
         try {
-            System.out.println("Insira travaRemoveLocomotivas ID do trem:");
+            System.out.println("Insira o ID do trem:");
             int idTrem = keyboard.nextInt();
 
             garagem.desacoplarLocomotiva(garagem.getTrem(idTrem));
@@ -391,7 +391,7 @@ public class Main {
 
     public static void removeVagao() {
         try {
-            System.out.println("Insira travaRemoveLocomotivas ID do trem:");
+            System.out.println("Insira o ID do trem:");
             int idTrem = keyboard.nextInt();
 
             garagem.desacoplarVagao(garagem.getTrem(idTrem));
