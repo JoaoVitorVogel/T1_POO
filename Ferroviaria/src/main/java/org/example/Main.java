@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     static Scanner keyboard = new Scanner(System.in);
 
-    private static final double PESO_MAXIMO = 5;
+    private static final double PESO_MAXIMO = 30;
     private static final int VAGOES_INICIAIS = 50;
     private static final int LOCOMOTIVA_INICIAIS = 10;
     private static final int CAPACIDADE_CARGA = 6;
@@ -33,7 +33,7 @@ public class Main {
 
     public static boolean menu() { // Menu interativo
         System.out.println("-------------------------------------------------------");
-        System.out.println("Seja Bem-vindo(a) ao centro de controle da ferroviária ");
+        System.out.println("          Centro de controle da ferroviária            ");
         System.out.println("-------------------------------------------------------");
         System.out.println("|                 Menu de opções                      |");
         System.out.println("|           Digite a opção desejada                   |");
@@ -80,7 +80,7 @@ public class Main {
         System.out.println("------------------------------------------------------");
     }
 
-    public static void escolheMenu(String nomeMenu) {
+    public static void escolheMenu() {
         System.out.println("------------------------------------------------------");
         System.out.println("       Escolha o que deseja fazer                     ");
         System.out.println("      1. Voltar ao menu anterior                      ");
@@ -98,7 +98,7 @@ public class Main {
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println("Input invalido");
+            System.out.println("Input inválido");
             keyboard.nextLine();
         }
     }
@@ -134,7 +134,7 @@ public class Main {
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println("Input invalido");
+            System.out.println("Input inválido");
             keyboard.nextLine();
         }
     }
@@ -149,7 +149,7 @@ public class Main {
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println("Input invalido");
+            System.out.println("Input inválido");
             keyboard.nextLine();
         }
     }
@@ -164,7 +164,7 @@ public class Main {
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println("Input invalido");
+            System.out.println("Input inválido");
             keyboard.nextLine();
         }
     }
@@ -179,7 +179,7 @@ public class Main {
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println("Input invalido");
+            System.out.println("Input inválido");
             keyboard.nextLine();
         }
     }
@@ -207,13 +207,13 @@ public class Main {
                     System.out.println(e.getMessage());
                 }
             } else {
-                System.out.println("O ID inserido nao e valido");
+                System.out.println("O ID inserido não e válido");
             }
 
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println("Input invalido");
+            System.out.println("Input inválido");
             keyboard.nextLine();
         }
     }
@@ -221,7 +221,7 @@ public class Main {
     public static boolean opcaoDeMenu() {
         boolean trava = true;
         do {
-            escolheMenu("de edição do trem");
+            escolheMenu();
             String menuOpcoes = keyboard.next();
             switch (menuOpcoes) {
                 case "1":
@@ -241,7 +241,7 @@ public class Main {
         boolean switchEdicao = true;
         do {
             System.out.println("-------------------------------------------------------");
-            System.out.println("    Digite a opção do que você deseja alterar no trem: ");
+            System.out.println("    Digite a opção do que você deseja editar no trem:  ");
             System.out.println("-------------------------------------------------------");
             System.out.println("|   1.  Adicionar uma locomotiva ao trem              |");
             System.out.println("|   2.  Adicionar um vagão ao trem                    |");

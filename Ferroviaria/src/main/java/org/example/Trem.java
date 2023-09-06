@@ -36,7 +36,7 @@ public class Trem {
         if (listaVagoes.size() < capacidadeDeVagoes) {
             this.listaVagoes.add(vagao);
         } else {
-            throw new ArrayIndexOutOfBoundsException("O limite de vagoes deste trem ja foi atingido");
+            throw new ArrayIndexOutOfBoundsException("O limite de vagões deste trem já foi atingido");
         }
     }
 
@@ -54,7 +54,7 @@ public class Trem {
 
     @Override
     public String toString() {
-        return "[ID: T" + id + " Locomotivas: " + listaLocomotivas + " Vagoes:" + listaVagoes + " Capacidade de Vagoes:"
+        return "[ID: T" + id + " Locomotivas: " + listaLocomotivas + " Vagoõs:" + listaVagoes + " Capacidade de Vagoes:"
                 + getCapacidadeDeVagoes() + "]";
     }
 

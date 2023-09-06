@@ -25,7 +25,7 @@ public class Garagem {
     public void cadastrarTrem(int id) throws InvalidParameterException {
         for (Trem t : garagemTrens) {
             if (t.getId() == id) {
-                throw new InvalidParameterException("O ID inserido pertence a outro trem ja cadastrado");
+                throw new InvalidParameterException("O ID inserido pertence a outro trem já cadastrado");
             }
         }
         garagemTrens.add(new Trem(id));
@@ -43,13 +43,13 @@ public class Garagem {
      */
     public void alocarLocomotiva(Locomotiva locomotiva, Trem trem) throws InvalidParameterException {
         if (garagemLocomotivas.isEmpty()){
-            throw new InvalidParameterException("A garagem de locomotivas esta vazia");
+            throw new InvalidParameterException("A garagem de locomotivas está vazia");
         } else if (!garagemLocomotivas.get(garagemLocomotivas.size()-1).equals(locomotiva)){
-            throw new InvalidParameterException("A locomotiva informada nao esta acessivel. Apenas a ultima unidade da garagem pode ser retirada");
+            throw new InvalidParameterException("A locomotiva informada não está acessível. Apenas a última unidade da garagem pode ser retirada");
         } else {
             if (!trem.getListaVagoes().isEmpty()) {
                 throw new InvalidParameterException(
-                        "Nao é possivel alocar locomotivas a unidades com vagoes ja acoplados.");
+                        "Nao é possível alocar locomotivas a unidades com vagões já acoplados.");
             }
             locomotiva.setTremAlocado(trem);
             trem.addLocomotiva(locomotiva);
@@ -69,12 +69,12 @@ public class Garagem {
      */
     public void alocarVagao(Vagao vagao, Trem trem) throws InvalidParameterException {
         if (garagemVagoes.isEmpty()){
-            throw new InvalidParameterException("A garagem de vagoes esta vazia");
+            throw new InvalidParameterException("A garagem de vagões está vazia");
         } else if (!garagemVagoes.get(garagemVagoes.size()-1).equals(vagao)){
-            throw new InvalidParameterException("O vagao informado nao esta acessivel. Apenas a ultima unidade da garagem pode ser retirada");
+            throw new InvalidParameterException("O vagão informado não está acessível. Apenas a última unidade da garagem pode ser retirada");
         } else {
             if (trem.getListaLocomotivas().isEmpty()) {
-                throw new InvalidParameterException("Não é possível alocar vagoes a unidades sem locomotivas acopladas.");
+                throw new InvalidParameterException("Não é possível alocar vagões a unidades sem locomotivas acopladas.");
             }
             vagao.setTremAlocado(trem);
             trem.addVagao(vagao);
@@ -94,7 +94,7 @@ public class Garagem {
     public void desacoplarLocomotiva(Trem trem) throws InvalidParameterException {
         if (!trem.getListaVagoes().isEmpty()) {
             throw new InvalidParameterException(
-                    "Nao e possivel desacoplar locomotivas sem antes desacoplar todos os vagoes.");
+                    "Não é possível desacoplar locomotivas sem antes desacoplar todos os vagões.");
         }
         garagemLocomotivas.add(trem.getListaLocomotivas().get(trem.getListaLocomotivas().size() - 1));
         trem.getListaLocomotivas().remove(trem.getListaLocomotivas().size() - 1);
@@ -119,7 +119,7 @@ public class Garagem {
             if (l.getId() == id)
                 return l;
         }
-        throw new InvalidParameterException("Locomotiva nao encontrada.");
+        throw new InvalidParameterException("Locomotiva não encontrada.");
     }
 
     /*
@@ -131,7 +131,7 @@ public class Garagem {
             if (v.getId() == id)
                 return v;
         }
-        throw new InvalidParameterException("Vagao nao encontrado.");
+        throw new InvalidParameterException("Vagão não encontrado.");
     }
 
     /*
@@ -143,7 +143,7 @@ public class Garagem {
             if (t.getId() == id)
                 return t;
         }
-        throw new InvalidParameterException("Trem nao encontrado.");
+        throw new InvalidParameterException("Trem não encontrado.");
     }
 
     /*
@@ -189,10 +189,10 @@ public class Garagem {
         }
         for (Locomotiva l : garagemLocomotivas) {
             if (l.getId() == id) {
-                throw new InvalidParameterException("Unidade nao alocada a nenhum trem");
+                throw new InvalidParameterException("Unidade não alocada a nenhum trem");
             }
         }
-        throw new InvalidParameterException("Unidade nao encontrada");
+        throw new InvalidParameterException("Unidade não encontrada");
     }
 
     /*
@@ -220,10 +220,10 @@ public class Garagem {
         }
         for (Vagao v : garagemVagoes) {
             if (v.getId() == id) {
-                throw new InvalidParameterException("Unidade nao alocada a nenhum trem");
+                throw new InvalidParameterException("Unidade não alocada a nenhum trem");
             }
         }
-        throw new InvalidParameterException("Unidade nao encontrada");
+        throw new InvalidParameterException("Unidade não encontrada");
     }
 
     /*
